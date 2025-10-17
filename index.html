@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warframe Dukaten Zähler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Warframe Dukaten-Zähler 💰</h1>
+        
+        <div class="counter-display">
+            Aktuelle Dukaten: <span id="dukat-count">0</span>
+        </div>
+        
+        <div class="controls">
+            <button onclick="addDukats(15)">+15 (Bronze)</button>
+            <button onclick="addDukats(45)">+45 (Silber)</button>
+            <button onclick="addDukats(100)">+100 (Gold)</button>
+        </div>
+
+        <button class="reset-button" onclick="resetCounter()">Zähler zurücksetzen</button>
+
+        <div class="history-section">
+            <h2>Historie</h2>
+            <ul id="history-list">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
