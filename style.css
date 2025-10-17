@@ -2,10 +2,10 @@ body {
     font-family: sans-serif;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Oben beginnen, damit die Historie Platz hat */
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
-    background-color: #1e1e1e; /* Dunkler Hintergrund im Warframe-Stil */
+    background-color: #1e1e1e;
     color: #f0f0f0;
     padding: 20px;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-    color: #ff9900; /* Gold-Akzent */
+    color: #ff9900;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -29,7 +29,7 @@ h1 {
     text-align: center;
     font-size: 1.8em;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Kleiner als vorher */
     background-color: #333;
     border-radius: 5px;
     border: 1px solid #ff9900;
@@ -40,6 +40,27 @@ h1 {
     font-size: 1.5em;
     color: #f0f0f0;
 }
+
+/* NEU: Styling für die Teile-Zusammenfassung */
+.parts-summary {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background-color: #383838;
+    border-radius: 5px;
+}
+
+.parts-summary p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.parts-summary span {
+    font-weight: bold;
+    color: #ff9900;
+}
+/* ENDE NEU */
 
 .controls {
     display: flex;
@@ -55,18 +76,18 @@ button {
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s;
-    flex-grow: 1; /* Alle Buttons gleich breit */
+    flex-grow: 1;
 }
 
-.controls button:nth-child(1) { /* +15 Bronze */
+.controls button:nth-child(1) {
     background-color: #a52a2a;
     color: white;
 }
-.controls button:nth-child(2) { /* +45 Silber */
+.controls button:nth-child(2) {
     background-color: #696969;
     color: white;
 }
-.controls button:nth-child(3) { /* +100 Gold */
+.controls button:nth-child(3) {
     background-color: #ffd700;
     color: #333;
     font-weight: bold;
@@ -89,7 +110,7 @@ button {
     list-style: none;
     padding: 0;
     max-height: 200px;
-    overflow-y: auto; /* Scrollbar, wenn die Historie zu lang wird */
+    overflow-y: auto;
 }
 
 #history-list li {
