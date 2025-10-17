@@ -3,38 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warframe Dukaten Zähler</title>
+    <title>Warframe Dukaten Zähler (Erweitert)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Warframe Dukaten-Zähler 💰</h1>
-        
-        <div class="counter-display">
-            Aktuelle Dukaten: <span id="dukat-count">0</span>
+        <h1>Warframe Dukaten Zähler</h1>
+
+        <div class="stats-box">
+            <div class="stat">
+                <h2>Aktuelle Dukaten</h2>
+                <p id="ducatCount" class="count-value">0</p>
+            </div>
+            <div class="stat">
+                <h2>Dukaten / Platin-Rate</h2>
+                <p id="platRate" class="count-value">5.0:1</p>
+                <small>Ein Prime-Teil für 100 Dukaten sollte mindestens 20 Platinum wert sein, um effizient zu sein.</small>
+            </div>
         </div>
         
-        <div class="parts-summary">
-            <p>Bronze (15): <span id="count-15">0</span></p>
-            <p>Silber (45): <span id="count-45">0</span></p>
-            <p>Gold (100): <span id="count-100">0</span></p>
+        <h2>Dukaten hinzufügen (Prime-Teil verkaufen)</h2>
+        <div class="input-group">
+            <button onclick="addDucats(15, 'Bronze Teil')" class="ducat-btn tier-15">+15</button>
+            <button onclick="addDucats(45, 'Silber Teil')" class="ducat-btn tier-45">+45</button>
+            <button onclick="addDucats(100, 'Gold Teil')" class="ducat-btn tier-100">+100</button>
         </div>
-        
-        <div class="controls">
-            <button onclick="addDukats(15)">+15 (Bronze)</button>
-            <button onclick="addDukats(45)">+45 (Silber)</button>
-            <button onclick="addDukats(100)">+100 (Gold)</button>
+        <div class="input-group">
+            <input type="number" id="customAmount" placeholder="Eigene Menge">
+            <button onclick="addCustomDucats()" class="ducat-btn custom-add">Hinzufügen</button>
         </div>
 
-        <button class="reset-button" onclick="resetCounter()">Zähler zurücksetzen</button>
+        <h2>Dukaten ausgeben (Baro-Kauf)</h2>
+        <div class="input-group spend-group">
+            <input type="number" id="spendAmount" placeholder="Dukaten-Betrag" class="spend-input">
+            <input type="text" id="spendItemName" placeholder="Gekaufter Gegenstand (z.B. Primed Mod)" class="spend-input">
+            <button onclick="spendDucats()" class="ducat-btn custom-spend">Ausgeben</button>
+        </div>
 
-        <div class="history-section">
-            <h2>Historie</h2>
-            <ul id="history-list">
+        <h2>Historie</h2>
+        <button onclick="clearHistory()" class="clear-btn">Historie leeren</button>
+        <div class="history-container">
+            <ul id="historyList">
                 </ul>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
