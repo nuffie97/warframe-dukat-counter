@@ -1,32 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212; /* Dunkler Hintergrund, inspiriert von Warframe */
-    color: #E0E0E0;
-    margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #1F1F1F;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-}
-
-h1 {
-    text-align: center;
-    color: #FFC107; /* Goldene Akzentfarbe */
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #BBBBBB;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
-    margin-top: 25px;
-}
+// ... (Vorhandener CSS-Code)
 
 /* Statistik-Box */
 .stats-box {
@@ -37,109 +9,20 @@ h2 {
     border: 1px solid #333;
     border-radius: 4px;
 }
+// ... (Vorhandener CSS-Code)
 
-.stat {
-    flex-basis: 48%;
-    text-align: center;
-}
-
-.count-value {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #FFC107;
-}
-
-#platRate {
-    font-size: 1.8em;
-    color: #4CAF50; /* Grüne Farbe für die Rate */
-}
-
-small {
-    display: block;
-    color: #777;
-    font-size: 0.8em;
-    margin-top: 5px;
-}
-
-/* Eingabegruppen */
-.input-group {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.spend-group .spend-input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #444;
-    border-radius: 4px;
-    background-color: #2D2D2D;
-    color: #E0E0E0;
-}
-
-/* Dukaten-Buttons */
-.ducat-btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s;
-    flex-grow: 1;
-}
-
-.ducat-btn:active {
-    opacity: 0.8;
-}
-
-.tier-15 { background-color: #B0855A; color: #1F1F1F; } /* Bronze/Kupfer */
-.tier-45 { background-color: #8C8C8C; color: #1F1F1F; } /* Silber */
-.tier-100 { background-color: #FFC107; color: #1F1F1F; } /* Gold */
-.custom-add { background-color: #1E88E5; color: white; } /* Blau */
-.custom-spend { background-color: #E53935; color: white; } /* Rot (Ausgabe) */
-.clear-btn {
-    background-color: #444;
+/* Neuer Reset-Button */
+.reset-btn {
+    background-color: #795548; /* Rost- oder Braun-Ton, passend zum Warframe-Thema */
     color: white;
     padding: 8px 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 15px;
+    font-weight: bold;
+    margin-top: 10px;
     transition: background-color 0.2s;
 }
-.clear-btn:hover { background-color: #555; }
+.reset-btn:hover { background-color: #6D4C41; }
 
-/* Historie */
-.history-container {
-    max-height: 250px;
-    overflow-y: auto;
-    background-color: #2D2D2D;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-#historyList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#historyList li {
-    padding: 8px 0;
-    border-bottom: 1px dotted #333;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9em;
-}
-
-#historyList li:last-child {
-    border-bottom: none;
-}
-
-.history-gain { color: #4CAF50; } /* Grün */
-.history-loss { color: #E53935; } /* Rot */
-
-.history-date {
-    font-size: 0.8em;
-    color: #777;
-}
+/* ... (Der Rest des CSS-Codes bleibt unverändert) */
